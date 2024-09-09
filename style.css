@@ -139,12 +139,14 @@ nav ul.nav_links li:first-child a {
 }
 
 .hero {
-  height: 100vh;
+  position: relative;
+  top: 278px;
+  /* height: 100vh;
   width: 100%;
   overflow: hidden;
   display: flex;
   justify-content: none;
-  align-items: center;
+  align-items: center; */
 }
 
 .hero_content {
