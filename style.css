@@ -1,0 +1,257 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  /*font*/
+  --font_heading: "Sora", sans-serif;
+  --font_text: "Space Mono", monospace;
+
+  /*font-weight*/
+  --regular: 400;
+  --medium: 500;
+  --semibold: 600;
+  --bold: 700;
+
+  /*color*/
+  --primary_color: #065545;
+  --text_color: #3d3d3d;
+  --clr_white: #fff;
+  --clr_white1: #e8fcf5;
+  --clr_black: #000;
+  --clr_black1: #222;
+
+  /*transition*/
+  --transition-duration: 0.4s;
+  --transition-timing-function: ease;
+
+  /*letter spacing*/
+  --spacing: -0.32px;
+}
+
+/*css reset*/
+h1,
+.h1 {
+  font-size: 80px;
+}
+
+h2,
+.h2 {
+  font-size: 48px;
+}
+
+h3,
+.h3 {
+  font-size: 32px;
+}
+
+h4,
+.h4 {
+  font-size: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+figure {
+  margin-bottom: 0;
+}
+img {
+  height: auto;
+  width: 100%;
+  vertical-align: top;
+}
+
+a {
+  text-decoration: none;
+  transition-property: color, opacity, background-color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/*header css*/
+
+.wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+header {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: url(../images/banner.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  height: 190px;
+  width: 100%;
+  max-width: 1600px;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 24px 40px;
+}
+
+nav ul.nav_links {
+  display: flex;
+  align-items: center;
+}
+
+nav ul.nav_links li a {
+  text-transform: capitalize;
+  color: var(--clr_black1);
+  margin-left: 40px;
+  font-size: 18px;
+  width: fit-content;
+}
+
+nav ul.nav_links li a:hover {
+  color: var(--clr_white);
+  border-bottom: 2px solid var(--clr_white);
+}
+
+nav ul.nav_links li:first-child a {
+  margin-left: 0;
+}
+
+#hamburger {
+  display: none;
+}
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: none;
+  align-items: center;
+}
+
+.hero_content {
+  max-width: 856px;
+  position: relative;
+  padding-left: 153px;
+}
+
+.hero_content h1 {
+  font-family: var(--font_heading);
+  font-weight: var(--semibold);
+  text-transform: capitalize;
+  margin-bottom: 40px;
+  line-height: 90px;
+  letter-spacing: var(--spacing);
+  color: var(--clr_white);
+}
+
+.hero_content p {
+  font-family: var(--font_text);
+  font-size: 28px;
+  font-weight: var(--regular);
+  color: var(--clr_white);
+  line-height: 42px;
+  letter-spacing: 0.16px;
+}
+
+@media (max-width: 991px) {
+  h1,
+  .h1 {
+    font-size: 60px;
+  }
+  .hero_content {
+    max-width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .hero_content h1 {
+    line-height: 45px;
+  }
+
+  .hero_content p {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    height: 100px;
+    padding: 16px;
+  }
+
+  nav ul.nav_links {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 16px;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 100%;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  }
+
+  nav ul.nav_links li a {
+    margin-left: 0;
+  }
+
+  nav ul.nav_links.active {
+    max-height: 300px;
+    opacity: 1;
+  }
+
+  #hamburger {
+    display: block;
+    font-size: 32px;
+  }
+
+  .header_logo img {
+    height: 50px;
+    object-fit: cover;
+  }
+
+  .hero_content {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  h1,
+  .h1 {
+    font-size: 40px;
+  }
+
+  .hero_content h1 {
+    margin-bottom: 20px;
+    line-height: 36px;
+  }
+  .hero_content p {
+    font-size: 16px;
+    line-height: 32px;
+  }
+}
