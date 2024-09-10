@@ -232,6 +232,14 @@ nav ul.nav_links li:first-child a {
     font-size: 32px;
   }
 
+  .hero {
+    position: relative;
+    top: unset;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+  }
+
   .header_logo img {
     height: 50px;
     object-fit: cover;
