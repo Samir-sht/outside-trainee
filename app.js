@@ -11,3 +11,19 @@ document.addEventListener("click", (e) => {
     menu_links.classList.remove("active");
   }
 });
+
+/*video*/
+
+const videoPlayers = document.querySelectorAll(".videoplayer");
+
+videoPlayers.forEach((video) => {
+  video.controls = false;
+
+  video.addEventListener("click", function () {
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  });
+});
