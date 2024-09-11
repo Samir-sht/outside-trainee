@@ -23,6 +23,7 @@
   --clr_white1: #e8fcf5;
   --clr_black: #000;
   --clr_black1: #222;
+  --clr_orange: #febf58;
 
   /*transition*/
   --transition-duration: 0.4s;
@@ -87,6 +88,16 @@ body {
   margin: 0 auto;
 }
 
+.container-lg {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1296px;
+  margin: 0 auto;
+}
+
 header {
   height: 100vh;
   width: 100%;
@@ -104,7 +115,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  height: 190px;
+  height: 150px;
   width: 100%;
   max-width: 1600px;
   z-index: 100;
@@ -140,7 +151,7 @@ nav ul.nav_links li:first-child a {
 
 .hero {
   position: relative;
-  top: 278px;
+  top: 260px;
   /* height: 100vh;
   width: 100%;
   overflow: hidden;
@@ -174,11 +185,76 @@ nav ul.nav_links li:first-child a {
   letter-spacing: 0.16px;
 }
 
+/*about*/
+.about {
+  padding-top: 96px;
+}
+
+.about_para {
+  font-family: var(--font_text);
+  font-weight: var(--regular);
+  line-height: 28px;
+  letter-spacing: 0.16px;
+  margin-bottom: 32px;
+  max-width: 1076px;
+}
+
+.about .about_block {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.card {
+  padding-top: 32px;
+  width: calc(100% / 3 - 25px);
+  border-left: 1px solid var(--clr_orange);
+}
+
+.card:first-child {
+  border-left: none;
+}
+
+.card .card_body {
+  margin-bottom: 64px;
+  padding-left: 24px;
+}
+
+.card .card_body h2 {
+  font-family: var(--font_heading);
+  color: var(--primary_color);
+  line-height: 40px;
+  letter-spacing: var(--spacing);
+  margin-bottom: 16px;
+  max-width: 255px;
+}
+
+.card .card_body p {
+  font-family: var(--font_text);
+  font-weight: var(--regular);
+  font-size: 16px;
+  letter-spacing: 0.32px;
+  line-height: 24px;
+  margin-bottom: 32px;
+  max-width: 355px;
+}
+
+.card .card_body a {
+  border: 1.5px solid var(--primary_color);
+  border-radius: 50%;
+  padding: 16px 17px;
+}
+
+.card .card_body a:hover {
+  padding: 10px 20px;
+  background-color: var(--clr_orange);
+  border-radius: 20px;
+  border: none;
+}
+
 @media (max-width: 991px) {
-  h1,
-  .h1 {
-    font-size: 60px;
-  }
   .hero_content {
     max-width: 100%;
     padding-left: 50px;
