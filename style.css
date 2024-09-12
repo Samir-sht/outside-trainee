@@ -535,7 +535,7 @@ ul.social-links li a img {
   }
   .footer-block {
     flex-direction: column;
-    gap: 30px;
+    gap: 24px;
   }
 
   ul.social-links {
@@ -545,6 +545,10 @@ ul.social-links li a img {
   .footer_links {
     flex-direction: column;
     gap: 30px;
+  }
+
+  .about_para {
+    line-height: 28px;
   }
 
   .about {
@@ -578,5 +582,17 @@ ul.social-links li a img {
 
   .footer_logo img {
     height: 80px;
+  }
+  h4,
+  .h4 {
+    font-size: 16px;
+  }
+
+  .footer_links ul li {
+    margin-bottom: 6px;
+  }
+
+  .footer_links ul li a {
+    font-size: 16px;
   }
 }
